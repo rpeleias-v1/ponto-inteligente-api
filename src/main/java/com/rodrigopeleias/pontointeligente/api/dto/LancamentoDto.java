@@ -1,5 +1,6 @@
 package com.rodrigopeleias.pontointeligente.api.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import java.util.Optional;
 @Builder
 @Getter
 @Setter
+@AllArgsConstructor
 public class LancamentoDto {
 
     private Optional<Long> id = Optional.empty();
@@ -20,6 +22,9 @@ public class LancamentoDto {
     private String descricao;
     private String localizacao;
     private Long funcionarioId;
+
+    public LancamentoDto() {
+    }
 
     @Override
     public String toString() {
