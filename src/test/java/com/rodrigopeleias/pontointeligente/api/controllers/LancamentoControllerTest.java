@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rodrigopeleias.pontointeligente.api.dto.LancamentoDto;
 import com.rodrigopeleias.pontointeligente.api.entities.Funcionario;
 import com.rodrigopeleias.pontointeligente.api.entities.Lancamento;
-import com.rodrigopeleias.pontointeligente.api.enums.TipoEnum; status
+import com.rodrigopeleias.pontointeligente.api.enums.TipoEnum;
 import com.rodrigopeleias.pontointeligente.api.services.FuncionarioService;
 import com.rodrigopeleias.pontointeligente.api.services.LancamentoService;
 import org.junit.Test;
@@ -109,7 +109,6 @@ public class LancamentoControllerTest {
         given(this.lancamentoService.buscarPorId(anyLong())).willReturn(Optional.of(new Lancamento()));
 
         mvc.perform(MockMvcRequestBuilders.delete(URL_BASE + ID_LANCAMENTO)
-                .with(csrf())
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isForbidden());
     }

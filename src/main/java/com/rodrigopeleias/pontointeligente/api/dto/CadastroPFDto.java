@@ -1,6 +1,8 @@
 package com.rodrigopeleias.pontointeligente.api.dto;
 
 import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.br.CNPJ;
 import org.hibernate.validator.constraints.br.CPF;
@@ -10,6 +12,8 @@ import javax.validation.constraints.NotEmpty;
 import java.util.Optional;
 
 @Builder
+@Getter
+@Setter
 public class CadastroPFDto {
 
     private Long id;
